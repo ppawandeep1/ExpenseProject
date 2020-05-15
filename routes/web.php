@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome');/*first page name*/
 });
+
+//Route::get('list','Users@list');  /*user name what we set in nav in layoyt in header*/
+Route::get('login','Users@login');
+Route::post('loginsubmit','Users@loginsubmit');
+
+
