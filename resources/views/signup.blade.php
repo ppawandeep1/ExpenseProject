@@ -4,8 +4,9 @@
                  @section('content')
                 <h1>signup page</h1>
                 <form action="/signupsubmit" method="post">
-                    {{ csrf_field() }}<!--token-->
-                    
+                   <!--{{ csrf_field()}}token-->
+                   <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+
                     <div class="form-group">
                         <input type="hidden" class="form-control" name="id" id="id">
                       </div>

@@ -39,7 +39,7 @@ class Users extends Controller
       $user->email=$req->email;
       $user->phone=$req->phone;
       $user->address=$req->address;
-      $user->password=$req->password;
+      $user->password=bcrypt($req->password);
       $user->save();
       /*$result=$user->save();*/
       if($req){
