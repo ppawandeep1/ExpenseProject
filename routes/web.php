@@ -54,4 +54,6 @@ Route::get('/create', function () {
 Route::post('createsubmit','Users@createsubmit');
 
 
+Route::get('sign','Users@signup');
+Route::post('signupsubmit','Users@signsubmit');
 

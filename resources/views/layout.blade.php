@@ -17,9 +17,16 @@
 						     <a class="navbar-brand" href="#">Welcome</a>
                               
 						      <a class="navbar-brand" href="login">Login</a> 
+
 						      <a class="navbar-brand" href="create">SignUp</a> 
                                
 						    </div>
+
+							</div>
+							<div class="navbar-header">
+								<a class="navbar-brand" href="sign">Sign Up</a> 
+							  </div>
+
 					  </div>
 				</nav>
 	    		@show		
@@ -28,11 +35,7 @@
 	    		 @section('content')
 	    		@show	
 	    	</div>
-	    	<div class="footer">
-	    		 @section('footer')
-	    		<h1>Footer Part</h1>
-	    		@show	
-	    	</div>
+	    	
 		</body>
 
 </html>
