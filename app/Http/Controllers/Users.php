@@ -21,18 +21,11 @@ class Users extends Controller
     {
        return view('profile');
     }
-
     /*login page*/
     function loginsubmit(Request $request)
     {
             // print_r($request->input());//working
             // return User::all();//working
-
-    function signup()
-    {
-       return view('signup');/*page name*/
-    }
-
 
             $username = $request->input('name');
             $password =$request->input('password');
@@ -72,21 +65,5 @@ class Users extends Controller
             return redirect('/login');
           }
          return redirect('/profile');   
-    }
-
-    function signsubmit(Request $req){
-      $user = new User;
-      $user->name=$req->name;
-      $user->firstName=$req->firstname;
-      $user->lastName=$req->lastname;
-      $user->email=$req->email;
-      $user->phone=$req->phone;
-      $user->address=$req->address;
-      $user->password=bcrypt($req->password);
-      $user->save();
-      /*$result=$user->save();*/
-      if($req){
-      print_r("inserted into database");
-      }
     }
 }
