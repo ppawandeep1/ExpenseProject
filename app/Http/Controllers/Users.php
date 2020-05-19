@@ -13,6 +13,10 @@ class Users extends Controller
     {
        return view('Login');/*page name*/
     }
+    function signup()
+    {
+       return view('signup');/*page name*/
+    }
 
      function loginsubmit(Request $request)
     {
@@ -25,5 +29,21 @@ class Users extends Controller
 	         ['password','=',$request->password ]
          ]
          )->get();
+    }
+
+    function signsubmit(Request $req){
+      $user = new User;
+      $user->name=$req->name;
+      $user->firstName=$req->firstname;
+      $user->lastName=$req->lastname;
+      $user->email=$req->email;
+      $user->phone=$req->phone;
+      $user->address=$req->address;
+      $user->password=bcrypt($req->password);
+      $user->save();
+      /*$result=$user->save();*/
+      if($req){
+      print_r("inserted into database");
+      }
     }
 }

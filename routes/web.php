@@ -19,4 +19,6 @@ Route::get('/', function () {
 Route::get('login','Users@login');
 Route::post('loginsubmit','Users@loginsubmit');
 
+Route::get('sign','Users@signup');
+Route::post('signupsubmit','Users@signsubmit');
 
