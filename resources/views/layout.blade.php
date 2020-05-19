@@ -13,7 +13,12 @@
 	    		<nav class="navbar navbar-inverse">
 					  <div class="container-fluid">
 						    <div class="navbar-header">
+						     
+						     <a class="navbar-brand" href="#">Welcome</a>
+                              
 						      <a class="navbar-brand" href="login">Login</a> 
+						      <a class="navbar-brand" href="create">SignUp</a> 
+                               
 						    </div>
 					  </div>
 				</nav>

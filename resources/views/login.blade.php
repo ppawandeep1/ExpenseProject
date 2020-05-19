@@ -1,14 +1,14 @@
 
 @extends('layout')
 
-<div class="content">
+            <div class="content">
 	    		 @section('content')
 	    		<h1>Login page</h1>
 	    		<form action="/loginsubmit" method="post">
 	    			{{ csrf_field() }}<!--token-->
 				  <div class="form-group">
-				    <label for="email">Email address:</label>
-				    <input type="email" class="form-control" name="email" id="email">
+				    <label for="name">User Name:</label>
+				    <input type="text" class="form-control" name="name" id="name">
 				  </div>
 				  <div class="form-group">
 				    <label for="pwd">Password:</label>
@@ -16,4 +16,5 @@
 				  </div>
 				  <button type="submit" class="btn btn-default">Submit</button>
 				</form>
+            </div>
 	    		@endsection 	
