@@ -52,8 +52,14 @@ Route::get('/create', function () {
 });
 //Route::get('create','Users@create');
 Route::post('createsubmit','Users@createsubmit');
+ 
+ //group
 
+Route::get('group','Groups@group');
+Route::post('creategroup','Groups@creategroup');
 
-Route::get('sign','Users@signup');
-Route::post('signupsubmit','Users@signsubmit');
+//members
+
+Route::get('addmembers','Members@members');
+
 
