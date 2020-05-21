@@ -15,9 +15,9 @@
 						    <div class="navbar-header">
 						     
 						     <a class="navbar-brand" href="#">Welcome</a>
-                              
 						      <a class="navbar-brand" href="login">Login</a> 
 						      <a class="navbar-brand" href="create">SignUp</a> 
+						      <a class="navbar-brand" href="group">Make Group</a>
                                
 						    </div>
 					  </div>
