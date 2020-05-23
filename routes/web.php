@@ -61,5 +61,9 @@ Route::post('creategroup','Groups@creategroup');
 //members
 
 Route::get('addmembers','Members@members');
+Route::get('/membersubmit', function () {
+	//die("i m here");
+});
+Route::post('membersubmit','Members@membersubmit');
 
 

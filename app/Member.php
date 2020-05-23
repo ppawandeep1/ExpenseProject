@@ -8,4 +8,5 @@ class Member extends Model
 {
     //
     public $timestamps = false;
+    protected $fillable = ['group','name'];
 }

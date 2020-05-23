@@ -14,8 +14,9 @@
 				  <!--<button type="submit" class="btn btn-default">Add Participants</button>-->
 				
 				  <button type="submit" class="btn btn-default">Save</button>
-				  <button type="submit" class="btn btn-default">Cancel</button>
-				  
+				  <button type="submit"  class="btn btn-default"><a href="{{ URL::previous() }}">Cancel</a></button>
+				  <!-- <a href="{{ URL::previous() }}">Go Back</a>
+				  -->
 				</form>
 				
             </div>
