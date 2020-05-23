@@ -13,11 +13,13 @@
 	    		<nav class="navbar navbar-inverse">
 					  <div class="container-fluid">
 						    <div class="navbar-header">
+						     
+						     <a class="navbar-brand" href="#">Welcome</a>
 						      <a class="navbar-brand" href="login">Login</a> 
-							</div>
-							<div class="navbar-header">
-								<a class="navbar-brand" href="sign">Sign Up</a> 
-							  </div>
+						      <a class="navbar-brand" href="create">SignUp</a> 
+						      <a class="navbar-brand" href="group">Make Group</a>
+                               
+						    </div>
 					  </div>
 				</nav>
 	    		@show		
@@ -26,7 +28,11 @@
 	    		 @section('content')
 	    		@show	
 	    	</div>
-	    	
+	    	<div class="footer">
+	    		 @section('footer')
+	    		<h1>Footer Part</h1>
+	    		@show	
+	    	</div>
 		</body>
 
 </html>
