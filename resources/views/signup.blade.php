@@ -40,6 +40,7 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit"  class="btn btn-default"><a href="{{ URL::previous() }}">Cancel</a></button>
   </form>
     @endsection
   
