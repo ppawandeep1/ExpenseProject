@@ -17,7 +17,8 @@
 						     <a class="navbar-brand" href="#">Welcome</a>
 						      <a class="navbar-brand" href="login">Login</a> 
 						      <a class="navbar-brand" href="create">SignUp</a> 
-						      <a class="navbar-brand" href="group">Make Group</a>
+							  <a class="navbar-brand" href="group">Make Group</a>
+							  <a class="navbar-brand" href="addexpense">Add Expense</a>
                                
 						    </div>
 					  </div>
@@ -28,11 +29,11 @@
 	    		 @section('content')
 	    		@show	
 	    	</div>
-	    	<div class="footer">
+	    	<!--<div class="footer">
 	    		 @section('footer')
 	    		<h1>Footer Part</h1>
 	    		@show	
-	    	</div>
+	    	</div>-->
 		</body>
 
 </html>

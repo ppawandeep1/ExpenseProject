@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Addexpense;
+use DB;
 class addexpenses extends Controller
 {
     //
@@ -12,23 +13,30 @@ class addexpenses extends Controller
      function expense()
      {
          $groups= \DB::table('groups')->select('*')->get();
-           //    ->join('users', 'users.id', '=', 'addexpense.id')
-             //  ->oin('groups', 'groups.id', '=', '')
+     
+         $categories= \DB::table('category')->select('*')->get();
+         
  
        //  $data=  Addexpense::all(); 
         // return view('addexpense',['data'=>$data]);
-         return view('addexpense',['groups'=>$groups]);
+         return view('addexpense',['groups'=>$groups , 'categories'=>$categories]);
          
      }
  
-   /*  function expensesubmit(Request $request){
-       $request->session()->put('data',$request->input());
-       if($request->session()->has('data'))
-       {
-         $user = new addexpenses;
-         $user->date=$request->date;
-         $user->description=$request->description;
-         $user->amount=$request->amount;
-       }
-     } */
+    function expensesubmit(Request $request){
+     
+           //  print_r($request->input());
+            // print_r($request->input());
+
+            DB::table('addexpense')
+       ->insert(
+           
+              ['date'=>$request->input('dato'),
+              'username'=>$request->input('username'),
+             'group_id'=>$request->input('selectgroup'),
+           'category_id'=>$request->input('selectcategory'),
+           'description'=>$request->input('description'),
+           'amount'=>$request->input('amount')]);
+
+     } 
 }

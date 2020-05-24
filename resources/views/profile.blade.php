@@ -4,8 +4,9 @@
           <nav class="navbar navbar-inverse">
 					  <div class="container-fluid">
 						    <div class="navbar-header">
-							<h2>Welcome {{session('data')['name']}}</h2>
-							  <a href="logout">LogOut</a>         
+							<h2>Welcome {{Session::get('uname')}} </h2>
+							  <a href="logout">LogOut</a> 
+							  <a href="addexpense">Addexpense</a>        
 				         </div>
 					  </div>
 				</nav>
