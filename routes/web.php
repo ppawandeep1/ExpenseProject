@@ -19,12 +19,18 @@ Route::get('/welcome', function () {
 	}
     return view('welcome');
 });
+//addexpense
+Route::get('/addexpense', function () {
+   //session()->forget("_KUL");
+   //session()->forget('data');
+   return redirect('/addexpense');
+});
 //logout
 Route::get('/logout', function () {
-   //session()->forget("_KUL");
-   session()->forget('data');
-   return redirect('/');
-});
+	//session()->forget("_KUL");
+	session()->forget('data');
+	return redirect('/');
+ });
 //profile page
 Route::get('/profile', function () {
 	if(!session()->has('data'))
@@ -66,4 +72,6 @@ Route::get('/membersubmit', function () {
 });
 Route::post('membersubmit','Members@membersubmit');
 
-
+//addExpense
+Route::get('addexpense','addexpenses@expense');
+Route::post('expensesubmit','addexpenses@expensesubmit');

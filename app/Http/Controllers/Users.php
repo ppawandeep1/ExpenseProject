@@ -33,7 +33,10 @@ class Users extends Controller
                if($user &&Hash::check($password, $user->password))
                {
                  //$request->session()->put('_KUL',1);
-                 $request->session()->put('data',$request->input());    
+                 //$request->session()->put('data',$request->input()); 
+                 $request->session()->put('data',$request->input());  
+                 $request->session()->put('uname',$request->input('name')); 
+                 //Session::put('uname', $username);  
                }
                else
                {
