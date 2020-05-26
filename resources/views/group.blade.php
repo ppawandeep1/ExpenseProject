@@ -20,11 +20,11 @@
             <div style="margin-top:70px; margin-left:30px; text-align:center;">
 				<h2 style="color: #f45464">Create Group</h2>
 				<form action="#">
-					<input type="text" id="groupname" name="groupname" placeholder="Group Name..">
+					<input type="text" id="groupname" name="groupname" placeholder="Group Name.." required>
 					<input type="text" id="id" name="id" placeholder="Id"> 
 				
 					<label for="participants">Add Participants</label><br>
-					<input type="text" id="username" name="username" placeholder="Enter Username"> <br>
+					<input type="text" id="username" name="username" placeholder="Enter Username" required> <br>
 				
 					<input type="submit" value="Submit"> <input type="submit" value="cancel">
 				  </form>

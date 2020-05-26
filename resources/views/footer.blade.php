@@ -4,7 +4,6 @@
         <div class="col-md-2 ftr_navi ftr">
             <h3>Navigation</h3>
             <ul>
-<<<<<<< HEAD
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact Us</a></li>
@@ -13,16 +12,6 @@
             </ul>
         </div>
         
-=======
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Signup</a></li>
-            </ul>
-        </div>
-
->>>>>>> bd419ef56ccf414de45088cc3cf3071531f49d9a
         <div class="col-md-3 get_in_touch ftr">
             <h3>Get In Touch </h3>
             <p>ISI, L'institut Supérieur d'Informatique</p>
