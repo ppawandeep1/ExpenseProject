@@ -11,6 +11,21 @@ Route::get('/', function () {
     return view('home');
 });
 
+//about page
+Route::get('/about', function () {
+    return view('about');
+});
+
+//contact page
+Route::get('/contact', function () {
+    return view('contact');
+});  
+
+//dashboard page
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
 //welcome page
 Route::get('/welcome', function () {
 	if(!session()->has('data'))
