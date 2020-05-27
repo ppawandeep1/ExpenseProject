@@ -1,46 +1,79 @@
-@extends('layout')
+
 @section('content')
 
-<form action="/createsubmit" method = "post">
-   
-    <input type="hidden" name="_token" value="{{csrf_token()}}">
-    <div class="form-group">
-        <label for="UserName">User Name</label>
-        <input type="text" class="form-control" name="username"  id="username">
-      </div>
+<div  class="home-right-content" style="background-color:#E8E8E8;margin-top:50px;margin-left: 300px; margin-bottom:50px;display:flex;flex-direction: row;">
+  <div>
+       <img src="{{ asset('assets/images/emoji2.png') }}" style="width: 200px;height:500px"/>
+  </div>
+   <div style="margin-top:30px; margin-left:200px; text-align:center;">
+<h2 style="color: #f45464">Sign up Form</h2>
+<br></br>
 
-      <div class="form-group">
-        <label for="FirstName">First Name</label>
-        <input type="text" class="form-control" name="firstname" id="firstname">
-      </div>
 
-      <div class="form-group">
-        <label for="LastName">Last Name</label>
-        <input type="text" class="form-control" name="lastname" id="lastname">
-      </div>
-
-      <div class="form-group">
-      <label for="email">Email </label>
-      <input type="email" class="form-control" name=" email" id="email">
-    </div>
-
-      <div class="form-group">
-        <label for="PhoneNumber">Phone Number</label>
-        <input type="num" class="form-control" name="phonenumber" id="phone">
-      </div>
-
-      <div class="form-group">
-        <label for="Address">Address</label>
-        <input type="text" class="form-control" name="address" id="address">
-      </div>
-      
-    <div class="form-group">
-      <label for="pwd">Password</label>
-      <input type="password" class="form-control" name="password" id="password">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <button type="submit"  class="btn btn-default"><a href="{{ URL::previous() }}">Cancel</a></button>
-  </form>
-    @endsection
+<form  action="/createsubmit" method = "post">
   
+
+   <input type="hidden" name="_token" value="{{csrf_token()}}"> <!--Token-->
+
+   <div class="form-group">
+   <div style="display:inline-block">
+    <input width="50px" height="70px"class="form-control" name="username" id="username" placeholder="Enter User Name....">
+  
+
+    <input width="50px" height="50px"class="form-control" name="firstname" id="firstname" placeholder="Enter First Name...."><br></br>
+  </div>
+   </div>
+
+
+  <div class="form-group">
+    <div style="display:inline-block">
+    <input width="50px" height="50px"class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name....">
+ 
+    <input type="textarea" width="50px" height="50px" class="form-control" name="address" id="address" placeholder="Enter Address...."><br></br>
+   
+  </div>
+</div>
+
+  <div class="form-group">
+    <div style="display:inline-block">
+    <input type="num" width="50px" height="50px" class="form-control" name="phonenumber" id="phone" placeholder="Enter Phone Number....">
+  
+
+    <input type="email" width="50px" height="50px" class="form-control" name="email" id="email" placeholder="Enter Email...."><br></br>
+  </div>
+</div>
+
+  <div class="form-group">
+    <input type="password" width="50px" height="50px" class="form-control" name="password" id="password" placeholder="Enter Password...."><br></br>
+  </div>
+
+  <input type="submit" value="Submit"> <input type="submit" value="cancel">
+   
+  
+  </form>
+</div>
+</div>
+</div>
+@stop
+ 
+<!doctype html>
+<html>
+    <head>
+  
+   <link rel="stylesheet" type="text/css" href="{{ url('css/custom.css') }}" />
+   
+</head>
+<body>
+<div class="container">
+   <header class="row">
+       @include('header')
+   </header>
+   <div id="main" class="row">
+           @yield('content')
+   </div>
+<footer class="row">
+    @include('footer')
+</footer>
+</div>
+</body>
+</html>
