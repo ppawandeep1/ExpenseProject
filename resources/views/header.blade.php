@@ -23,9 +23,10 @@
                         <li class="hvr-sweep-to-bottom"><a href="/about">About us<i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i></a></li>
                         <li class="hvr-sweep-to-bottom"><a href="/contact">Contact us<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>
                         <li class="hvr-sweep-to-bottom"><a href="/login">Login<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>
-                        <li class="hvr-sweep-to-bottom"><a href="signup.">Signup<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>     
+                        <li class="hvr-sweep-to-bottom"><a href="/signup">Signup<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>     
                     </ul>
 
             </div>
         </div>
     </div>
+    

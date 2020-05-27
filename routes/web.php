@@ -64,7 +64,7 @@ Route::get('/login', function () {
 });
 Route::post('loginsubmit','Users@loginsubmit');
 //sign up page
-Route::get('/create', function () {
+Route::get('/signup', function () {
 	if(session()->has('data'))
 	{
 		return redirect('/profile');
