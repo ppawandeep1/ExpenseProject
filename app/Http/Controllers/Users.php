@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
  use Session;
 class Users extends Controller
 {
-   
+    protected $redirectTo = '/login';
     /*welcome page*/
     function welcome()
     {
