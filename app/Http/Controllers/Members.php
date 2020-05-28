@@ -25,7 +25,6 @@ class Members extends Controller
      {
      
      // print_r($request->input('name'));
-     // print_r($request->input('count'));
      // die;
      // 	DB::table('members')
      // 	->insert([
@@ -44,10 +43,8 @@ class Members extends Controller
          ]);
         }
      //	die('kuljit');
-        //return redirect('/addmembers');
-       // return redirect()->back()->with('message', 'IT WORKS!');
-      //  return redirect()->back()->withSuccess('IT WORKS!');
-        return  "Members Added Into Group !!";
+       // return  "Members Added Into Group !!";
+        return redirect('/addmembers')->with('flash_message_success','!! Members Added Successfully In Group !!');    
     
      }
 

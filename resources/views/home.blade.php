@@ -19,10 +19,7 @@
            <div>
                 <img src="{{ asset('assets/images/welcome.PNG') }}" style="width: 300px;height:500px"/>
            </div>
-                <div style="margin-top:160px; margin-left:30px; text-align:right;">
-                    <h2 style="color: #f45464">"Welcome to Expense System! "</h2>
-                    <h4 style="color:#2c343c;">Expense System helps you split bills with friends.<br><br> Click “Add Expense” to get started</h4>
-                </div>
+                
             
        </div>
    </div>
@@ -32,15 +29,27 @@
     <head>
    {{-- @include('head') --}}
    <link rel="stylesheet" type="text/css" href="{{ url('css/custom.css') }}" />
+   <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}">
 </head>
 <body>
 <div class="container">
    <header class="row">
        @include('header')
    </header>
-   <div id="main" class="row">
+   <!--<div id="main" class="row">
            @yield('content')
-   </div>
+   </div>--->
+            <div id="main" class="row" style="height: 50%;  width:100%">
+                <div class="home-right-content" style="margin-top:50px; margin-bottom:50px;display:flex;flex-direction: row;">
+                <div style="height: 50%;  width:200%" >
+                  <img src="{{ asset('assets/images/emoji3.png') }}" style="width:100%;height:100%;margin-left: 100px"/>
+               </div>
+              <div style="margin-top:100px; margin-left:30px;">
+                <h2 style="color: #f45464; text-align: center; margin-left: 100px">Expense System is a Providence, that makes it easy to split bills with friends and family. We organize all your shared expenses together, so that everyone can see who they owe. Whether you are sharing a ski vacation, splitting rent with roommates, or paying someone back for lunch, Expense System makes life easier. </h2>
+              </div>
+            </div>
+           </div>
+
 <footer class="row">
     @include('footer')
 </footer>
