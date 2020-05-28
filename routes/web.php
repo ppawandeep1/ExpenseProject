@@ -41,11 +41,8 @@ Route::get('/addexpense', function () {
    return redirect('/addexpense');
 });
 //logout
-Route::get('/logout', function () {
-	//session()->forget("_KUL");
-	session()->forget('data');
-	return redirect('/');
- });
+Route::get('logout','Users@logout');
+
 //profile page
 Route::get('/profile', function () {
 	if(!session()->has('data'))

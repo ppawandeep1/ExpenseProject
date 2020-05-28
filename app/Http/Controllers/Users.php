@@ -21,6 +21,14 @@ class Users extends Controller
     {
        return view('profile');
     }
+   // logout
+    function logout()
+    {
+      Session::flush();
+  
+     return redirect('/');
+    }
+    
     /*login page*/
     function loginsubmit(Request $request)
     {
@@ -32,15 +40,12 @@ class Users extends Controller
                $user= User::where('name', '=', $username)->first();
                if($user &&Hash::check($password, $user->password))
                {
-                 //$request->session()->put('_KUL',1);
-                 //$request->session()->put('data',$request->input()); 
                  $request->session()->put('data',$request->input());  
-                 $request->session()->put('uname',$request->input('name')); 
-                 //Session::put('uname', $username);  
+                 $request->session()->put('uname',$request->input('name'));  
                }
                else
                {
-                return "Login Invalid , Check Login Details";
+                return redirect('/login')->with('flash_message_error','!! Login Invalid , Check Login Details !!');     
                }
                return redirect('/profile');
           

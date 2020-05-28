@@ -550,18 +550,10 @@ body a:hover{
 .team-member-detail img{
 	border-radius: 55px;
 }
-/* group page details */
-input[type=text], select {
-	width: 47%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-  }
-  
-  input[type=submit] {
+
+  input[type=reset],
+   input[type=button],
+   input[type=submit]{
 	width: 47%;
 	background-color: #f45464;
 	color: white;
@@ -571,7 +563,8 @@ input[type=text], select {
 	border-radius: 4px;
 	cursor: pointer;
   }
-  
+  input[type=reset]:hover,
+  input[type=button]:hover,
   input[type=submit]:hover {
 	background-color: #c01123;
   }

@@ -56,6 +56,7 @@
     <head>
    {{-- @include('head') --}}
    <link rel="stylesheet" type="text/css" href="{{ url('css/custom.css') }}" />
+   <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}">
 </head>
 <body>
 <div class="container">
