@@ -27,8 +27,6 @@
        </div>
    </div>
 @stop
-
-
 <!doctype html>
 <html>
     <head>
