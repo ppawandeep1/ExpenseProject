@@ -343,201 +343,8 @@ body a:hover{
 /*--/footer--*/
 
 
-
-/*-----start-responsive-design------*/
-@media (max-width:1280px){
-	.banner-info {
-		margin: 10em auto 0 22em;
-	}
-	.banner {
-		min-height: 660px;
-	}
-}
-@media (max-width:1024px){
-	.blog-left-grid ul li {
-		margin: 0 1em 0 0;
-	}
-	.header-left1 {
-		margin-left: 5em;
-	}
-	.banner-info {
-		margin: 10em auto 0 14em;
-		width: 71%;
-	}
-	.banner-bottom-right h3 {
-		font-size: 1.5em;
-	}
-	.banner-bottom-right p {
-		margin: 0em 0 2em;
-	}
-	
-	.banner-info h1 {
-		font-size: 2.5em;
-	}
-	.banner {
-		min-height: 585px;
-	}
-	.header-right ul {
-		padding: 3.5em 0 0;
-	}
-	.footer {
-		padding: 3em 0;
-	}
-	
-}
-
-@media (max-width:640px){
-	.header-left1 {
-		margin: 2em 0 0 7em;
-	}
-	.header-left a {
-		padding: 1em 0.5em 0.5em;
-	}
-	.header-right ul {
-		padding: 2.5em 0 0;
-	}
-	.banner-info h1 {
-		font-size: 2em;
-	}
-	.banner-info p {
-		width: 100%;
-	}
-	
-	/*-- t --*/
-	h1, .h1, h2, .h2, h3, .h3 {
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-	
-	/*-- //t --*/
-	.contact-form {
-		padding-top: 2em;
-	}
-	.contact input[type="text"], .contact input[type="email"], .contact textarea {
-		width: 31.3%;
-	}
-}
-@media (max-width:600px){
-	.banner-info {
-		margin: 5em auto 0 0em;
-		width: 100%;
-	}
-}
-@media (max-width:480px){
-	.header-left1 {
-		margin: 2em 0 0 5.5em;
-	}
-	.header-left a {
-		font-size: 1.8em;
-	}
-	.header-left a i {
-		left: -5px;
-	}
-	.banner-info h1 {
-		font-size: 1.8em;
-	}
-	.banner-info p {
-		font-size: 13px;
-	}
-	.more a,.service-grid a {
-		font-size: 15px;
-		padding: 8px 20px;
-	}
-	.banner {
-		min-height: 400px;
-	}
-	.banner-info {
-		margin: 3em auto 0 0em;
-	}
-	.header-left1 ul li a i {
-		font-size: .7em;
-		margin: 0.2em 0 0;
-	}
-	.header-left1 ul li a {
-		font-size: 14px;
-	}
-	.header-left a span {
-		font-size: 14px;
-	}
-	.banner-bottom, .blog, .single, .typo, .contact, .service, .servc {
-		padding: 2em 0;
-	}
-	.banner-bottom-right h3 {
-		font-size: 1.3em;
-	}
-	.banner-bottom-right {
-		margin: 1em 0 0;
-	}
-	.banner-bottom-3grid {
-		float: none;
-		width: 80%;
-		margin: 0 auto 1em;
-	}
-
-	.footer {
-		padding: 2em 0 1em;
-	}
-	
-}
-@media (max-width: 414px){
-	.header-left1 {
-		margin: 2em 0 0 3.5em;
-	}
-	.banner-info h1 {
-		font-size: 1.5em;
-	}
-}
-@media (max-width:375px){
-	.header-left1 {
-		margin: 2.2em 0 0 2em;
-	}
-}
-@media (max-width: 320px){
-	.blog-left-grid p{
-		font-size:13px;
-	}
-	.header-left1 {
-		margin:2.2em 0 0 1em;
-	}
-	.header-left a {
-		font-size: 1.5em;
-	}
-	.header-left a span {
-		font-size: 12px;
-	}
-	.header-right ul li {
-		float: left;
-	}
-	.banner-info h1 {
-		font-size: 1.1em;
-	}
-	
-}
 /*home page*/
-.home-main-content{
-	display: flex;
-	flex-direction: row;
-}
-.custom-home-main-content{
-	display: flex;
-	flex-direction: column;
-}
-.home-main-content .home-left-content{
-    width: 25%;
-    margin-right:20px;
-}
-/* .home-main-content .home-left-conten ul li a:hover {
-    background-color: #555 !important;
-    color: white;
-} */
-.home-right-content{
-    /* flex-grow: ; */
-    width:62%;
-}
-/*about us page*/
-.custom-main-content{
-	width:85%;
-}
+
 .team-members{
 	display: flex;
 	flex-direction: row;
@@ -551,11 +358,12 @@ body a:hover{
 	border-radius: 55px;
 }
 
+ /****************kuljit******/
   input[type=reset],
    input[type=button],
    input[type=submit]{
 	width: 47%;
-	background-color: #f45464;
+	background-color: #c01123;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -566,6 +374,37 @@ body a:hover{
   input[type=reset]:hover,
   input[type=button]:hover,
   input[type=submit]:hover {
-	background-color: #c01123;
+	background-color:#f45464;
   }
-  
+ 
+
+ .sidebar{
+ 	display: inline-block;
+ 	background-color: #ffb3b3;
+ 	width: 30%;
+ 	float: left;
+    height: 100%;
+
+ } 
+
+ .content{
+ 	display: inline-block;
+ 	width: 70%;
+ 	background-color: #ffb3b3;
+     height: 100%;
+ }
+.membody{
+    margin-top: -65%;
+    margin-left: 500px;
+}
+
+    table, th, td {
+  border: 1px solid black;
+}
+th {
+  background-color: #f45464;
+  color: white;
+}
+table{
+   background-color: white; 
+}
