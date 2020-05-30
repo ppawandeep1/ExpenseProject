@@ -13,6 +13,7 @@
            <img src="{{ asset('assets/images/emoji2.png') }}" style="width: 250px;height:100%"/>
            <div class="membody">
             <h2 style="color:  #000000; padding-bottom: 50px;">Add Members....</h2>
+
               @if(Session::has('flash_message_success'))
                 <div class="alert alert-danger alert-block" style="margin-bottom: 50px; padding-bottom: 50px;">
                    <strong style="color: green;">{!! session('flash_message_success') !!}</strong>
@@ -20,11 +21,14 @@
                 @endif
                    <form  id="myForm" action="membersubmit" method="post">
                     <div class="form-row" style="padding-top: 50px;">
-                        <div class="form-group col-md-6" style="margin-left: -30%;margin-top: -50px;">
+
+                        <div class="form-group col-md-6" style="margin-left: -30%; margin-top: -50px;">
+
                           {{ csrf_field() }}<!--token-->
                               <input type="hidden" value="0" name="count" id="count">
+
                               <select id="group" name="group" class="form-control" style="width: 30%; height: 40px ;">
-                                <option value="" disabled selected>Select Group....</option>
+                              ` <option value="" disabled selected>Select Group....</option>
                                   @foreach($groups as $g)
                                   <option  value="{{$g->id}}">{{$g->gname}}</option>
                                   @endforeach

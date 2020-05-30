@@ -38,5 +38,6 @@ class addexpenses extends Controller
            'description'=>$request->input('description'),
            'amount'=>$request->input('amount')]);
 
+           return redirect('/addexpense')->with('success','!! Expense added Successfully!!');
      } 
 }
