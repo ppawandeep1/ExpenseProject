@@ -15,41 +15,39 @@
 
    <input type="hidden" name="_token" value="{{csrf_token()}}"> <!--Token-->
 
-   <div class="form-group">
-   <div style="display:inline-block">
-    <input width="50px" height="70px"class="form-control" name="username" id="username" placeholder="Enter User Name....">
+   <div class="alert alert-info" style="width:300px; height: 100px;">
+    
+    <div class="form-group">
+      <div style="display:inline-block">
+    <input width="50px" height="50px" class="form-control" name="username" id="username" placeholder="Enter User Name....">
   
 
-    <input width="50px" height="50px"class="form-control" name="firstname" id="firstname" placeholder="Enter First Name...."><br></br>
-  </div>
-   </div>
+    <input width="50px" height="50px" class="form-control" name="firstname" id="firstname" placeholder="Enter First Name...."><br></br>
+    </div>
+    </div>
 
-
-  <div class="form-group">
-    <div style="display:inline-block">
-    <input width="50px" height="50px"class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name....">
+    <div class="form-group">
+      <div style="display:inline-block">
+    <input  width="50px" height="50px" class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name....">
+    <input type="num" width="50px" height="50px" class="form-control" name="phonenumber" id="phone" placeholder="Enter Phone Number...."><br></br>
+      </div>
+    </div>
  
-    <input type="textarea" width="50px" height="50px" class="form-control" name="address" id="address" placeholder="Enter Address...."><br></br>
-   
-  </div>
-</div>
-
   <div class="form-group">
     <div style="display:inline-block">
-    <input type="num" width="50px" height="50px" class="form-control" name="phonenumber" id="phone" placeholder="Enter Phone Number....">
-  
-
-    <input type="email" width="50px" height="50px" class="form-control" name="email" id="email" placeholder="Enter Email...."><br></br>
-  </div>
-</div>
-
-  <div class="form-group">
+    
+   <input type="email" width="50px" height="50px" class="form-control" name="email" id="email" placeholder="Enter Email....">
     <input type="password" width="50px" height="50px" class="form-control" name="password" id="password" placeholder="Enter Password...."><br></br>
   </div>
+</div>
+
+  <div class="form-group">
+    <input type="textarea"style=" width: 100%; height: 50%;text-align: center;"  class="form-control" name="address" id="address" placeholder="Enter Address...."><br></br>
+   </div>
 
   <input type="submit" value="Submit"> <input type="submit" value="cancel">
    
-  
+</div>
   </form>
 </div>
 </div>
