@@ -55,28 +55,47 @@ class Users extends Controller
     {
         return view('signup');
     }
-
+    
+    /*sign up */
     function createsubmit(Request $request)
     {
-         $request->session()->put('data',$request->input());
-          if($request->session()->has('data'))
-          {
-            $user = new User;
-            $user->name=$request->username;
-            $user->firstName=$request->firstname;
-            $user->lastName=$request->lastname;
-            $user->email=$request->email;
-            $user->phone=$request->phonenumber;
-            $user->address=$request->address;
-            $user->password=Hash::make($request->password);
-            $user->save();
-            return redirect('/login');
-          }
-         return redirect('/profile');   
+            $request->session()->put('data',$request->input());
+                if($request->session()->has('data'))
+                { 
+           
+            $username = $request->input('name');
+               $user= User::where('name', '=', $username)->first();
+               if($user)
+               {
+               
+                 return redirect('/signup')->with('flash_message_error','!! Username already exists !!');
+               }
+               else
+               {
+                $this->validate($request,[
+                  "name"=>"required",
+                  "firstname"=>"required",
+                  "lastname"=>"required",
+                  "email"=>"required|email",
+                  "phonenumber"=>"required|max:10|regex:/^\d+(\.\d{1,2})?$/",
+                  "address"=> "required",
+                  "password"=>"required"
+                ]);
+    
+                $user = new User;
+                $user->name=$request->name;
+                $user->firstName=$request->firstname;
+                $user->lastName=$request->lastname;
+                $user->email=$request->email;
+                $user->phone=$request->phonenumber;
+                $user->address=$request->address;
+                $user->password=Hash::make($request->password);
+                $user->save();
+                return redirect('/signup')->with('flash_message_success','!! Thank You for Signup !!');     
+               }
+              }
+               // return redirect('/login')->with('flash_message_error','!! Signup Successfull !!');
     }
-
-
-
-
+        
 }
 
