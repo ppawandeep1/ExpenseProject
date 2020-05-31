@@ -36,7 +36,6 @@
                    
 
                         <div class="form-group">
-                          
                           <input  style=" width: 80%; height: 50% ; margin-left: -30%;" class="form-control" name="username" id="username"  value="{{session('uname')}}" placeholder="Enter User Name...."><br></br>
                         </div>
 
@@ -56,9 +55,7 @@
                         <option value="{{$c_name->id}}">{{$c_name->category_name}}</option>
                           @endforeach
                         </select><br></br>
-                            
-                        
-            
+                
 
                       <div class="form-group">
                       <input style=" width: 80%; height: 50% ;margin-left: -30%; text-align: center;"class="form-control" name="description" id="description" placeholder="Enter Description...."><br></br>
@@ -69,6 +66,7 @@
                       <div class="form-group">
                         <input style=" width: 80%; height: 50% ; margin-left: -30%; text-align: center;" type="numbers" class="form-control" id="amount" name="amount" placeholder="Enter the Amount...."><br></br>
                       </div>
+
                     
                       <input style="  margin-left: -10%; " type="submit" value="Submit"> <!--<input type="submit" value="cancel">-->.
                   

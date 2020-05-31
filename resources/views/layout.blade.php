@@ -4,7 +4,7 @@
 	 	<link rel="stylesheet" type="text/css" href="{{ url('css/custom.css') }}" />
 	 	   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	 	   <script src="{{asset('js/members.js')}} "></script> <!--add js file-->
-
+         <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}">
 	 </head>
 		   <body>
 	<!---header content ---->
@@ -40,7 +40,8 @@
 		                            padding: 8px 16px; text-decoration: none;">Add Group Members</a></li>
 		                    <li><a href="addexpense" onMouseOver="this.style.background=' #ffffff'" onMouseOut="this.style.background='none'" style="color:#f45464;display: block; font-weight: 700;padding: 8px 16px;
 		                        text-decoration: none;">Add Expense</a></li>
-		                    <li><a href="#" onMouseOver="this.style.background=' #ffffff'" onMouseOut="this.style.background='none'" style="color:#f45464;display: block; font-weight: 700; padding: 8px 16px;text-decoration: none;">Calculate Expense</a></li>
+		                    <li><a href="viewExpense" onMouseOver="this.style.background=' #ffffff'" onMouseOut="this.style.background='none'" style="color:#f45464;display: block; font-weight: 700; padding: 8px 16px;text-decoration: none;">View All Expenses</a></li>
+		                    <li><a href="calculate" onMouseOver="this.style.background=' #ffffff'" onMouseOut="this.style.background='none'" style="color:#f45464;display: block; font-weight: 700; padding: 8px 16px;text-decoration: none;">Calculate Expenses</a></li>
 		                    <li><a onMouseOver="this.style.background=' #ffffff'" onMouseOut="this.style.background='none'" class="btn btn-primary fad fa-user" href="{{url('/logout')}}" role="button" style="color:#f45464;display: block; font-weight: 700; padding: 40px 16px;text-decoration: none;">Logout</a></li>
 		        </ul>
 	    		@show	
@@ -49,7 +50,7 @@
 	<!---body content ---->
 		   	@show
 		   	<div  class="content">
-
+              
 		   		@yield('content')
 		   	</div>
 	<!---footer content ---->

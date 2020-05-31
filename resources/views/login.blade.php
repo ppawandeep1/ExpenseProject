@@ -18,7 +18,7 @@
 					<div class="alert alert-info" style="width:300px;height: 100px;">
 					  <input type="text" style=" width: 100%; height: 40% ; text-align: center;" class="form-control" name="name" id="name" placeholder="Enter User Name...."><br></br>
 					  <input style=" width: 100%; height: 40%;text-align: center;" type="password" class="form-control" name="password" id="pwd" placeholder="Enter Password...."><br></br>
-				      <input type="submit" value="Save"> <input type="reset" value="Cancel">
+				      <input type="submit" value="Login"> <input type="reset" value="Cancel">
 				     
 				     
 				  </div>

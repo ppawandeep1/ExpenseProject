@@ -16,9 +16,6 @@ class addexpenses extends Controller
      
          $categories= \DB::table('category')->select('*')->get();
          
- 
-       //  $data=  Addexpense::all(); 
-        // return view('addexpense',['data'=>$data]);
          return view('addexpense',['groups'=>$groups , 'categories'=>$categories]);
          
      }
@@ -35,6 +32,7 @@ class addexpenses extends Controller
               'username'=>$request->input('username'),
              'group_id'=>$request->input('selectgroup'),
            'category_id'=>$request->input('selectcategory'),
+            'userid'=>$request->input('name'),
            'description'=>$request->input('description'),
            'amount'=>$request->input('amount')]);
 

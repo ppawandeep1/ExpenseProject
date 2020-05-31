@@ -28,7 +28,7 @@
                               <input type="hidden" value="0" name="count" id="count">
 
                               <select id="group" name="group" class="form-control" style="width: 30%; height: 40px ;">
-                              ` <option value="" disabled selected>Select Group....</option>
+                                <option value="" disabled selected>Select Group....</option>
                                   @foreach($groups as $g)
                                   <option  value="{{$g->id}}">{{$g->gname}}</option>
                                   @endforeach
