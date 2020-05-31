@@ -34,12 +34,16 @@ Route::get('/welcome', function () {
 	}
     return view('welcome');
 });
+
+
 //addexpense
 Route::get('/addexpense', function () {
    //session()->forget("_KUL");
    //session()->forget('data');
    return redirect('/addexpense');
 });
+
+
 //logout
 Route::get('logout','Users@logout');
 
@@ -60,6 +64,8 @@ Route::get('/login', function () {
 	 return view('login');
 });
 Route::post('loginsubmit','Users@loginsubmit');
+
+
 //sign up page
 Route::get('/signup', function () {
 	if(session()->has('data'))
@@ -71,10 +77,12 @@ Route::get('/signup', function () {
 //Route::get('create','Users@create');
 Route::post('createsubmit','Users@createsubmit');
  
+
  //group
 
 Route::get('group','Groups@group');
 Route::post('creategroup','Groups@creategroup');
+
 
 //members
 
@@ -83,6 +91,7 @@ Route::get('/membersubmit', function () {
 	//die("i m here");
 });
 Route::post('membersubmit','Members@membersubmit');
+
 
 //addExpense
 Route::get('addexpense','addexpenses@expense');

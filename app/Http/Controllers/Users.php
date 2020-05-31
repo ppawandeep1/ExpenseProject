@@ -55,28 +55,34 @@ class Users extends Controller
     {
         return view('signup');
     }
-
+    
+    /*sign up */
     function createsubmit(Request $request)
     {
-         $request->session()->put('data',$request->input());
-          if($request->session()->has('data'))
-          {
-            $user = new User;
-            $user->name=$request->username;
-            $user->firstName=$request->firstname;
-            $user->lastName=$request->lastname;
-            $user->email=$request->email;
-            $user->phone=$request->phonenumber;
-            $user->address=$request->address;
-            $user->password=Hash::make($request->password);
-            $user->save();
-            return redirect('/login');
-          }
-         return redirect('/profile');   
+            
+            $username = $request->input('name');
+               $user= User::where('name', '=', $username)->first();
+               if($user)
+               {
+               
+                 return redirect('/signup')->with('flash_message_error','!! Username already exists !!');
+               }
+               else
+               {
+                $user = new User;
+                $user->name=$request->name;
+                $user->firstName=$request->firstname;
+                $user->lastName=$request->lastname;
+                $user->email=$request->email;
+                $user->phone=$request->phonenumber;
+                $user->address=$request->address;
+                $user->password=Hash::make($request->password);
+                $user->save();
+                return redirect('/login')->with('flash_message_error','!! Signup Successfull !!');     
+               }
+               
+          
     }
-
-
-
-
+        
 }
 

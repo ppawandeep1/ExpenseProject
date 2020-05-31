@@ -9,7 +9,12 @@
 <h2 style="color: #f45464">Sign up Form</h2>
 <br></br>
 
-
+@if(Session::has('flash_message_error'))
+				<div class="alert alert-danger alert-block" style="margin-bottom: 50px;">
+                   <strong style="color: red;">{!! session('flash_message_error') !!}</strong>
+                </div>
+        @endif
+        
 <form  action="/createsubmit" method = "post">
   
 
@@ -19,8 +24,7 @@
     
     <div class="form-group">
       <div style="display:inline-block">
-    <input width="50px" height="50px" class="form-control" name="username" id="username" placeholder="Enter User Name....">
-  
+    <input width="50px" height="50px" class="form-control" name="name" id="name" placeholder="Enter User Name....">
 
     <input width="50px" height="50px" class="form-control" name="firstname" id="firstname" placeholder="Enter First Name...."><br></br>
     </div>
@@ -42,7 +46,7 @@
 </div>
 
   <div class="form-group">
-    <input type="textarea"style=" width: 100%; height: 50%;text-align: center;"  class="form-control" name="address" id="address" placeholder="Enter Address...."><br></br>
+    <input type="textarea"style=" width: 100%; height: 100%;"  class="form-control" name="address" id="address" placeholder="Enter Address...."><br></br>
    </div>
 
   <input type="submit" value="Submit"> <input type="submit" value="cancel">
