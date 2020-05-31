@@ -96,3 +96,10 @@ Route::post('membersubmit','Members@membersubmit');
 //addExpense
 Route::get('addexpense','addexpenses@expense');
 Route::post('expensesubmit','addexpenses@expensesubmit');
+
+// calculate expense
+Route::get('viewExpense','ViewExs@ViewEx');
+
+Route::get('calculate','ViewExs@calculate');
+ 
+Route::post('calculate_submit','ViewExs@calculate_submit');

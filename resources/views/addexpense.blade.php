@@ -46,7 +46,11 @@
                        
                        <!--Get username from user table-->
                         <div class="form-group">
+
+                          <input  style=" width: 80%; height: 50% ; margin-left: -30%;" class="form-control" name="username" id="username"  value="{{session('uname')}}" placeholder="Enter User Name...."><br></br>
+
                           <input  style=" width: 80%; height: 50% ; margin-left: -30%; margin-top:-30px; text-align: center;" class="form-control" name="username" id="username"  value="{{session('uname')}}" placeholder="Enter User Name...."><br></br>
+
                         </div>
 
       
@@ -66,6 +70,10 @@
                           @foreach($categories as $c_name)
                         <option value="{{$c_name->id}}">{{$c_name->category_name}}</option>
                           @endforeach
+
+                        </select><br></br>
+                
+
                         </select>
 
                         <!--Required validations-->
@@ -82,6 +90,7 @@
                         
             
                          <!--Input field-->
+
                       <div class="form-group">
                       <input style=" width: 80%; height: 50% ;margin-left: -30%; margin-top:20px; text-align: center;"class="form-control" name="description" id="description" placeholder="Enter Description....">
                         
@@ -105,10 +114,16 @@
                          @endif
                         </div>
                       </div>
+
+                    
+                      <input style="  margin-left: -10%; " type="submit" value="Submit"> <!--<input type="submit" value="cancel">-->.
+                  
+
                      
                       <!--Buttons-->
                       <input style="  margin-left: -40%; margin-top: 5%;" type="submit" value="Submit"> 
                       <input type="reset" value="Cancel">
+
                     </div>
                   </div>
                  
