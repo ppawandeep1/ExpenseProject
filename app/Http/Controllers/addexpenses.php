@@ -7,7 +7,7 @@ use App\Addexpense;
 use DB;
 class addexpenses extends Controller
 {
-    //
+   
      //Add Expense
 
      function expense()
@@ -17,8 +17,7 @@ class addexpenses extends Controller
          $categories= \DB::table('category')->select('*')->get();
          
  
-       //  $data=  Addexpense::all(); 
-        // return view('addexpense',['data'=>$data]);
+      
          return view('addexpense',['groups'=>$groups , 'categories'=>$categories]);
          
      }
@@ -26,9 +25,8 @@ class addexpenses extends Controller
  
     function expensesubmit(Request $request){
      
-           //  print_r($request->input());
-            // print_r($request->input());
-
+            //validations
+            
             $this->validate($request,[
               "date"=>"required|date",
               "selectgroup"=>"required",
@@ -36,6 +34,8 @@ class addexpenses extends Controller
               "description"=>"required|string",
               "amount"=>"required|regex:/^\d+(\.\d{1,2})?$/"
             ]);
+
+            //storing the data into the database
 
             DB::table('addexpense')
        ->insert(
