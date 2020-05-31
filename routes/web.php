@@ -70,7 +70,7 @@ Route::post('loginsubmit','Users@loginsubmit');
 Route::get('/signup', function () {
 	if(session()->has('data'))
 	{
-		return redirect('/profile');
+		return view('/signup');
 	}else
     return view('signup');
 });

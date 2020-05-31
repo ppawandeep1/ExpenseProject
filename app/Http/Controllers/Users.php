@@ -59,7 +59,10 @@ class Users extends Controller
     /*sign up */
     function createsubmit(Request $request)
     {
-            
+            $request->session()->put('data',$request->input());
+                if($request->session()->has('data'))
+                { 
+           
             $username = $request->input('name');
                $user= User::where('name', '=', $username)->first();
                if($user)
@@ -69,6 +72,16 @@ class Users extends Controller
                }
                else
                {
+                $this->validate($request,[
+                  "name"=>"required",
+                  "firstname"=>"required",
+                  "lastname"=>"required",
+                  "email"=>"required|email",
+                  "phonenumber"=>"required|max:10|regex:/^\d+(\.\d{1,2})?$/",
+                  "address"=> "required",
+                  "password"=>"required"
+                ]);
+    
                 $user = new User;
                 $user->name=$request->name;
                 $user->firstName=$request->firstname;
@@ -78,10 +91,10 @@ class Users extends Controller
                 $user->address=$request->address;
                 $user->password=Hash::make($request->password);
                 $user->save();
-                return redirect('/login')->with('flash_message_error','!! Signup Successfull !!');     
+                return redirect('/signup')->with('flash_message_success','!! Thank You for Signup !!');     
                }
-               
-          
+              }
+               // return redirect('/login')->with('flash_message_error','!! Signup Successfull !!');
     }
         
 }
