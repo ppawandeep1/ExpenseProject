@@ -1,6 +1,6 @@
 
 @section('content')
-
+<link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}">
 <div  class="home-right-content" style="background-color:#E8E8E8;margin-top:50px;margin-left: 300px; margin-bottom:50px;display:flex;flex-direction: row;">
        
   <!--Image-->
@@ -37,12 +37,12 @@
 
            <!--Input field--->
     <div class="form-group">
-      <div style="display:inline-block">
-    <input width="50px" height="50px" class="form-control" name="name" id="name" placeholder="Enter User Name....">
+      <div style="display:inline; width:50%; height:30px; ">
+    <input class="form-control" name="name" id="name" placeholder="Enter User Name....">
 
-    <input width="50px" height="50px" class="form-control" name="firstname" id="firstname" placeholder="Enter First Name....">
+    <input  class="form-control" name="firstname" id="firstname" placeholder="Enter First Name....">
     </div>
-    </div>
+    </div>  
                <!--for Input field validations-->
     <div>
       @if ($errors->has('name'))
@@ -56,10 +56,10 @@
      </div>
 
       <!--Input field--->
-    <div class="form-group">
-      <div style="display:inline-block; margin-top:20px;">
-    <input  width="50px" height="50px" class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name....">
-    <input type="num" width="50px" height="50px" class="form-control" name="phonenumber" id="phone" placeholder="Enter Phone Number....">
+    <div class="form-group" style="margin-top:20px">
+      <div style="display:inline; width:50%; height:30px;">
+    <input  class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name....">
+    <input type="num" class="form-control" name="phonenumber" id="phone" placeholder="Enter Phone Number....">
       </div>
     </div>
                <!--for Input field validations--> 
@@ -75,11 +75,11 @@
      </div>
  
       <!--Input field--->
-  <div class="form-group">
-    <div style="display:inline-block;  margin-top:20px;">
+  <div class="form-group" style="margin-top:20px">
+    <div  style="display:inline;" >
     
-   <input type="email" width="50px" height="50px" class="form-control" name="email" id="email" placeholder="Enter Email....">
-    <input type="password" width="50px" height="50px" class="form-control" name="password" id="password" placeholder="Enter Password....">
+   <input type="email"  class="form-control" name="email" id="email" placeholder="Enter Email....">
+    <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password....">
   </div>
 </div>
         <!--for Input field validations-->
@@ -95,7 +95,7 @@
  </div>
 
   <!--Input field--->
-  <div class="form-group" height="100px">
+  <div class="form-group" style="margin-top:20px height:100px">
     <input type="text" style=" width: 100%; height: 40px;  margin-top:20px;"  class="form-control" name="address" id="address" placeholder="Enter Address....">
    </div>
 

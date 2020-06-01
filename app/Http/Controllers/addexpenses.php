@@ -42,7 +42,6 @@ class addexpenses extends Controller
               'username'=>$request->input('username'),
              'group_id'=>$request->input('selectgroup'),
            'category_id'=>$request->input('selectcategory'),
-            'userid'=>$request->input('name'),
            'description'=>$request->input('description'),
            'amount'=>$request->input('amount')]);
 
