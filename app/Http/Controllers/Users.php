@@ -73,13 +73,13 @@ class Users extends Controller
                else
                {
                 $this->validate($request,[
-                  "name"=>"required",
-                  "firstname"=>"required",
-                  "lastname"=>"required",
-                  "email"=>"required|email",
-                  "phonenumber"=>"required|max:10|regex:/^\d+(\.\d{1,2})?$/",
-                  "address"=> "required",
-                  "password"=>"required"
+                "name"=>"required|regex:/^([a-zA-Z]+)(\s[a-zA-Z]+)*$/",
+                "firstname"=>"required|regex:/^([a-zA-Z]+)(\s[a-zA-Z]+)*$/",
+                "lastname"=>"required|regex:/^([a-zA-Z]+)(\s[a-zA-Z]+)*$/",
+                "email"=>"required|email",
+                "phonenumber"=>"required|max:10|regex:/^\d+(\.\d{1,2})?$/",
+                "address"=> "required",
+                "password"=>"required|min:6|"
                 ]);
     
                 $user = new User;
