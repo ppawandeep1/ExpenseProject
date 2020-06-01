@@ -14,8 +14,8 @@
     margin-top: -500px;
     margin-left: 350px;">
         <h1 style="margin-top: -80%; padding-bottom: 50px; margin-left: 100px;">Your Expense is....</h1>
-<div class="table" style="margin-left: 200px;">
-	<table style="width:20% ; border: 1px solid black;">
+   <div class="table" style="margin-left: 200px;">
+	<table style="width:50% ; border: 1px solid black;">
 		<tr style="border: 1px solid black;">
 		    <th style="border: 1px solid black;">User</th>
 		    <th style="border: 1px solid black;">Paid</th>

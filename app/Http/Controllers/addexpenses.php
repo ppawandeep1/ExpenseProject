@@ -29,7 +29,7 @@ class addexpenses extends Controller
               "date"=>"required|date",
               "selectgroup"=>"required",
               "selectcategory"=>"required",
-              "description"=>"required|string",
+             "description"=>"required|regex:/^([a-zA-Z]+)(\s[a-zA-Z]+)*$/",
               "amount"=>"required|regex:/^\d+(\.\d{1,2})?$/"
             ]);
 
