@@ -79,7 +79,7 @@ class Users extends Controller
                 "email"=>"required|email",
                 "phonenumber"=>"required|max:10|regex:/^\d+(\.\d{1,2})?$/",
                 "address"=> "required",
-                "password"=>"required|min:6|"
+                "password"=>"required|min:5|"
                 ]);
     
                 $user = new User;

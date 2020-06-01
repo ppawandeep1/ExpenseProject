@@ -101,7 +101,7 @@
                      
                        <!--Input field-->
                       <div class="form-group">
-                        <input style=" width: 80%; height: 50% ; margin-left: -30%;  margin-top:-20px;"  type="numbers" class="form-control" id="amount" name="amount" placeholder="CAD">
+                        <input style=" width: 80%; height: 50% ; margin-left: -30%; text-align: center; margin-top:-20px;"  type="numbers" class="form-control" id="amount" name="amount" placeholder="CAD">
                         
                         <!--Required validations-->
                         <div>
